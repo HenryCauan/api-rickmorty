@@ -1,7 +1,8 @@
 import Api from "@/pages/api";
+import Json from "@/pages/json";
 
 const Home = () => {
-  return  (
+  return (
     <>
       <Api />
     </>

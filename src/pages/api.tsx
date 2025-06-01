@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Json from "./json";
 
 const Api: React.FC = () => {
     const [personagens, setPersonagens] = useState<Personagem[]>([]);
 
     interface Personagem {
+        id: number;
         image: string;
         name: string;
         origin: {
@@ -30,11 +30,11 @@ const Api: React.FC = () => {
         <>
             <div className="flex flex-col items-center min-h-screen p-12">
                 <h1 className="text-4xl font-bold pb-24">
-                    <Link href="/json" className="hover:underline">The Rick and Morty API</Link>
+                    <Link href="json" className="hover:underline">The Rick and Morty API</Link>
                 </h1>
                 <div className="grid md:grid-cols-3 grid-cols-1 gap-8" id="personagens">
-                    {personagens.map((char, index) => (
-                        <div className="flex flex-col">
+                    {personagens.map((char) => (
+                        <div key={char.id} className="flex flex-col">
                             <img src={char.image} alt={char.name} />
                             <h2 className="font-semibold text-center">{char.name}</h2>
                             <p>{char.origin.name}</p>

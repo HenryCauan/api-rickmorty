@@ -1,11 +1,4 @@
-{
-    "info": {
-      "count": 826,
-      "pages": 42,
-      "next": "https://rickandmortyapi.com/api/character?page=3",
-      "prev": "https://rickandmortyapi.com/api/character?page=1"
-    },
-    "results": [
+[
       {
         "id": 21,
         "name": "Aqua Morty",
@@ -229,5 +222,4 @@
         "created": "2017-11-04T22:45:35.524Z"
       }
     ]
-  }
   
